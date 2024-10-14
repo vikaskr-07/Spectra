@@ -23,10 +23,10 @@ import {
 	SelectValue,
 } from '@/components/ui/select'
 
-// Defining RTMP and WHIP types
-const RTMP = IngressInput.RTMP_INPUT
-const WHIP = IngressInput.WHIP_INPUT
-type IngressType = IngressInput
+// Defining string types for RTMP and WHIP
+const RTMP = 'RTMP'
+const WHIP = 'WHIP'
+type IngressType = typeof RTMP | typeof WHIP
 
 export function ConnectModal() {
 	const closeRef = useRef<ElementRef<'button'>>(null)
@@ -36,10 +36,13 @@ export function ConnectModal() {
 	// Handle form submission
 	function onSubmit() {
 		startTransition(() => {
-			createIngress(ingressType) // Pass the correct IngressInput type (RTMP or WHIP)
+			// Use the appropriate ingress type for the createIngress function
+			const ingressInputType = ingressType === RTMP ? IngressInput.RTMP_INPUT : IngressInput.WHIP_INPUT;
+			
+			createIngress(ingressInputType) // Pass the correct IngressInput type (RTMP or WHIP)
 				.then((url) => {
 					toast.success(
-						`${ingressType === RTMP ? 'RTMP' : 'WHIP'} ingress created: ${url}`
+						`${ingressType} ingress created: ${url}` // Correctly display the ingress type
 					)
 					closeRef?.current?.click() // Close the dialog after success
 				})
@@ -60,7 +63,7 @@ export function ConnectModal() {
 				<Select
 					disabled={isPending}
 					value={ingressType}
-					onValueChange={(value: IngressType) => setIngressType(value)}
+					onValueChange={(value: IngressType) => setIngressType(value)} // Set the ingress type as a string
 				>
 					<SelectTrigger className='w-full'>
 						<SelectValue placeholder='Ingress type' />

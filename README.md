@@ -33,3 +33,8 @@ Key Features:
 - 🗺️ Grouped routes & layouts
 - 🗃️ Postgresql
 - 🚀 Deployment
+
+
+create .env file and add all required credentials 
+npm install
+npm run dev

@@ -31,5 +31,5 @@ Key Features:
 - ⚡ Blazing fast application
 - 📄 SSR (Server-Side Rendering)
 - 🗺️ Grouped routes & layouts
-- 🗃️ MySQL
+- 🗃️ Postgresql
 - 🚀 Deployment

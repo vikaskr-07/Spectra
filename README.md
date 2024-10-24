@@ -46,49 +46,48 @@ Make sure you have **Node.js** installed.
 
 3. Create a .env file in the root directory and add the required environment variables:
 
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-CLERK_SECRET_KEY=
-NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
-NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
-NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
-NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
-CLERK_WEBHOOK_SECRET=
+  NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+  CLERK_SECRET_KEY=
+  NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+  NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+  NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+  NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
+  CLERK_WEBHOOK_SECRET=
 
-DATABASE_URL=
+  DATABASE_URL=
+  LIVEKIT_API_URL=
+  LIVEKIT_API_KEY=
+  LIVEKIT_SECRET_KEY=
+  NEXT_PUBLIC_LIVEKIT_WS_URL=
+ 
+  UPLOADTHING_SECRET=
+  UPLOADTHING_APP_ID=
 
-LIVEKIT_API_URL=
-LIVEKIT_API_KEY=
-LIVEKIT_SECRET_KEY=
-NEXT_PUBLIC_LIVEKIT_WS_URL=
+4. Run the Application
+ 
+   To run the application locally, execute:
 
-UPLOADTHING_SECRET=
-UPLOADTHING_APP_ID=
+   npm run dev
+ 
+   The application will be at http://localhost:3000
 
-Run the Application
+5. Technologies Used
 
-To run the application locally, execute the following command:
+   Next.js
 
-npm run dev
+   WebRTC / RTMP Protocol
 
-The application will be available at http://localhost:3000
+   Prisma ORM with PostgreSQL
 
-Technologies Used
+   Clerk for Authentication
 
-Next.js
+   WebSockets for Real-Time Communication
+ 
+   LiveKit for Real-Time Streaming
 
-WebRTC / RTMP Protocol
-
-Prisma ORM with PostgreSQL
-
-Clerk for Authentication
-
-WebSockets for Real-Time Communication
-
-LiveKit for Real-Time Streaming
-
-UploadThing for Media Uploads
+   UploadThing for Media Uploads
 
 
-Contributing
+###Contributing
 
-If you would like to contribute to this project, feel free to create a pull request or open an issue.
+If you would like to contribute to this project,      feel free to create a pull request or open an issue.

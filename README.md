@@ -88,6 +88,6 @@ Make sure you have **Node.js** installed.
    UploadThing for Media Uploads
 
 
-###Contributing
+Contributing
 
 If you would like to contribute to this project,      feel free to create a pull request or open an issue.
